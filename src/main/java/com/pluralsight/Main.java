@@ -38,8 +38,7 @@ public class Main {
         System.out.println("Is Available: "+room.isAvailable());
         System.out.println();
         //employee test
-        employee.punchIn(10);
-        employee.punchOut(20);
+        employee.punchTimeCard(10,20);
 
 
     }

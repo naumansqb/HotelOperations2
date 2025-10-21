@@ -6,7 +6,6 @@ public class Employee {
     private String department;
     private double payRate;
     private double hoursWorked;
-    private double punchInTime;
 
     public Employee(int employeeId, String name, String department, double payRate, double hoursWorked) {
         this.employeeId = employeeId;
@@ -64,7 +63,7 @@ public class Employee {
             return 0;
         }
     }
-    public void punchIn(double time){
+/*    public void punchIn(double time){
         punchInTime=time;
         System.out.println(name+" punched in at "+time);
     }
@@ -72,5 +71,14 @@ public class Employee {
         hoursWorked+=(time-punchInTime);
         System.out.println(name+" punched out at "+time);
         System.out.println(name+" worked a total of "+hoursWorked+" hours during this paycheck");
+    }*/
+
+    public void punchTimeCard(double startTime,double endTime){
+        hoursWorked+=(endTime-startTime);
+        System.out.println(name+ "punched in at "+startTime);
+        System.out.println(name+" punched out at "+endTime);
+        System.out.println(name+" worked for "+(endTime-startTime)+" hours today");
+        System.out.println(name+" worked a total of "+hoursWorked+" hours during this paycheck");
+
     }
 }
