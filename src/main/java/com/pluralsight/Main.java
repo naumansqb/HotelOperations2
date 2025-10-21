@@ -30,5 +30,12 @@ public class Main {
         System.out.println("Is Occupied: " + room.isOccupied());
         System.out.println("Is Dirty: " + room.isDirty());
         System.out.println("Is Available: " + room.isAvailable());
+
+        room.checkIn();
+        room.checkOut();
+        System.out.println("Is Available: "+room.isAvailable());
+        room.cleanRoom();
+        System.out.println("Is Available: "+room.isAvailable());
+
     }
 }
